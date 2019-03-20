@@ -96,20 +96,24 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="技术分享">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="原型对象的继承12345678910111213141516171819202122232425262728293031323334353637function Person(name) &amp;#123;       this.name = name || &apos;Tom&apos;;       this.sleep = function () &amp;#123;           console.log(this.n">
+<meta property="og:type" content="article">
+<meta property="og:title" content="原型对象的继承">
+<meta property="og:url" content="http://yoursite.com/2019/03/20/原型对象的继承/index.html">
 <meta property="og:site_name" content="技术分享">
+<meta property="og:description" content="原型对象的继承12345678910111213141516171819202122232425262728293031323334353637function Person(name) &amp;#123;       this.name = name || &apos;Tom&apos;;       this.sleep = function () &amp;#123;           console.log(this.n">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-03-20T01:03:29.189Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="技术分享">
+<meta name="twitter:title" content="原型对象的继承">
+<meta name="twitter:description" content="原型对象的继承12345678910111213141516171819202122232425262728293031323334353637function Person(name) &amp;#123;       this.name = name || &apos;Tom&apos;;       this.sleep = function () &amp;#123;           console.log(this.n">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2019/03/20/原型对象的继承/">
 
 
 
@@ -119,7 +123,7 @@
   };
 </script>
 
-  <title>技术分享</title>
+  <title>原型对象的继承 | 技术分享</title>
   
 
 
@@ -167,8 +171,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -206,7 +209,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
 
     
     
@@ -268,9 +271,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -304,10 +307,8 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/03/20/原型对象的继承/" class="post-title-link" itemprop="url">原型对象的继承</a>
+          <h1 class="post-title" itemprop="name headline">原型对象的继承
+
               
             
           </h1>
@@ -371,22 +372,7 @@
       
 
       
-        
-          
-            <p>
-              原型对象的继承function Person(name) &#123;       this.name = name || 'Tom';       this.sleep = function () &#123;           console.log(this.name + '正在睡觉')  
-              ...
-            </p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/03/20/原型对象的继承/#more" rel="contents">
-                Weiterlesen &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
+        <h2 id="原型对象的继承"><a href="#原型对象的继承" class="headerlink" title="原型对象的继承"></a>原型对象的继承</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> Person(name) &#123;</span><br><span class="line">       this.name = name || <span class="string">'Tom'</span>;</span><br><span class="line">       this.sleep = <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">           console.log(this.name + <span class="string">'正在睡觉'</span>)</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br><span class="line">   Person.prototype.eat = <span class="keyword">function</span> (food) &#123;</span><br><span class="line">       console.log(this.name + <span class="string">'正在吃：'</span> + food);</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   // 原型对象继承</span><br><span class="line">   <span class="keyword">function</span> <span class="function"><span class="title">Cat</span></span>() &#123;</span><br><span class="line"></span><br><span class="line">   &#125;</span><br><span class="line">   Cat.prototype = new Person();</span><br><span class="line">   Cat.prototype.name = <span class="string">'小猫'</span>;</span><br><span class="line">   var cat = new Cat();</span><br><span class="line">   cat.eat(<span class="string">'🐟'</span>)</span><br><span class="line">   cat.sleep();</span><br><span class="line"></span><br><span class="line">   // 构造函数继承</span><br><span class="line">   <span class="keyword">function</span> Cat1(name) &#123;</span><br><span class="line">       Person.call(this);</span><br><span class="line">       this.name = name || <span class="string">'TOM'</span>;</span><br><span class="line">   &#125;</span><br><span class="line">   var cat1 = new Cat1(<span class="string">'老猫'</span>);</span><br><span class="line">   cat1.sleep();</span><br><span class="line"></span><br><span class="line">   //实例继承</span><br><span class="line">   <span class="keyword">function</span> Cat2(name) &#123;</span><br><span class="line">       var instance = new Person();</span><br><span class="line">       instance.name = name || <span class="string">'Tom'</span>;</span><br><span class="line">       <span class="built_in">return</span> instance</span><br><span class="line">   &#125;</span><br><span class="line">   var cat2 = new Cat2(<span class="string">'猫祖宗'</span>);</span><br><span class="line">   console.log(cat2.name);</span><br><span class="line">   cat2.sleep()</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -409,187 +395,40 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  <div>
-      
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  
-
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/19/每日励志文章/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="peidong">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="技术分享">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/03/19/每日励志文章/" class="post-title-link" itemprop="url">数组方法的封装</a>
-              
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
+              <a href="/2019/03/19/每日励志文章/" rel="next" title="数组方法的封装">
+                <i class="fa fa-chevron-left"></i> 数组方法的封装
+              </a>
             
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-
-              
-                
-              
-
-              <time title="Erstellt: 2019-03-19 11:19:07" itemprop="dateCreated datePublished" datetime="2019-03-19T11:19:07+08:00">2019-03-19</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Bearbeitet am</span>
-                
-                <time title="Geändert am: 2019-03-20 09:32:03" itemprop="dateModified" datetime="2019-03-20T09:32:03+08:00">2019-03-20</time>
-              
-            
-          </span>
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>
-              
-数组的方法 slice 封装var arr = [1, 5, 9, 4, 5, 6, 7, 8];       Array.prototype.myslice = function () &#123;           var newArr = [];           // 当有一个参数的时
-              ...
-            </p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/03/19/每日励志文章/#more" rel="contents">
-                Weiterlesen &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
   <div>
+      
+          <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">
+              -------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------
+        </div>
+    
+</div>
       
   </div>
   
@@ -598,14 +437,15 @@
   </article>
 
 
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -625,8 +465,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Übersicht
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -672,6 +521,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#原型对象的继承"><span class="nav-number">1.</span> <span class="nav-text">原型对象的继承</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -800,6 +666,10 @@
 
 
   
+  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/js/src/post-details.js?v=7.0.1"></script>
+
+
 
   
 
@@ -815,6 +685,8 @@
 
   
 
+
+  
 
 
   
