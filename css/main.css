@@ -1843,7 +1843,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #c9ff93;
+  background: #ff9cff;
 }
 .links-of-blogroll {
   margin-top: 10px;
@@ -2580,4 +2580,11 @@ embed {
 }
 .highlight:hover .btn-copy {
   opacity: 1;
+}
+body {
+  text-align: center;
+}
+#busuanzi_container_site_pv,
+#busuanzi_container_site_uv {
+  font-size: 14px;
 }
